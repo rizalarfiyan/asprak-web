@@ -21,7 +21,7 @@
                 Address
             </th>
             <th scope="col" class="px-6 py-3">
-                Program Study
+				Study Program
             </th>
             <th scope="col" class="px-6 py-3">
                 Hobby

@@ -51,7 +51,7 @@
             <div class="space-y-2">
                 <label for="study-program">Study Program</label>
                 <select id="study-program" name="study-program">
-                    <option selected disabled>Select Program Study</option>
+                    <option selected disabled>Select Study Program</option>
                     <?php foreach ($studyPrograms as $program): ?>
                         <option value="<?= $program['id'] ?>"><?= $program['name'] ?></option>
                     <?php endforeach; ?>
