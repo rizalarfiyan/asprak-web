@@ -48,28 +48,7 @@ class StudentController extends Controller
 					'value' => 'P',
 				],
 			],
-			'hobbies' => [
-				[
-					'name' => 'Coding',
-					'value' => 'coding',
-				],
-				[
-					'name' => 'Reading',
-					'value' => 'reading',
-				],
-				[
-					'name' => 'Sport',
-					'value' => 'sports',
-				],
-				[
-					'name' => 'Music',
-					'value' => 'music',
-				],
-				[
-					'name' => 'Photography',
-					'value' => 'photography',
-				]
-			],
+			'hobbies' => [], // TODO: add hobbies options
 		];
 	}
 

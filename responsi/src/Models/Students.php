@@ -63,7 +63,8 @@ class Students {
 
 	public function delete($id)
 	{
-		$this->db->query("DELETE FROM students WHERE nim = :id");
+		// TODO: delete not work
+		$this->db->query("DELETE FROM students WHERE id = :id");
 		$this->db->bind('id', $id);
 		$this->db->execute();
 	}

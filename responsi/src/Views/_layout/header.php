@@ -37,9 +37,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= isset($title) ? "{$title} - {$appName}" : $appName ?></title>
-	<script src="/assets/js/tailwindcss.min.js"></script>
-	<script src="/assets/js/htmx.min.js"></script>
-	<script src="/assets/js/_hyperscript.min.js"></script>
+	<script src="/tailwindcss.min.js"></script>
+	<script src="/htmx.min.js"></script>
+	<script src="/_hyperscript.min.js"></script>
     <style type="text/tailwindcss">
 		@theme {
 			--color-*: initial;
