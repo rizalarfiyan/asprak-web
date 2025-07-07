@@ -34,7 +34,7 @@
                         <td><?php echo $row['jenis_kelamin']; ?></td>
                         <td><?php echo $row['jurusan']; ?></td>
                         <td><?php echo $row['alamat']; ?></td>
-                        <td>coding,membaca,fotografi</td>
+                        <td><?php echo $row['hobi']; ?></td>
                         <td>
                             <a href="form_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
                             <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Hapus</a>

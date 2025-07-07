@@ -52,31 +52,31 @@
                 <label class="form-label">Hobi</label>
                 <div class="d-flex flex-wrap gap-3">
                     <div class="form-check">
-                        <input class="form-check-input" name="hobi" type="checkbox" value="coding" id="coding">
+                        <input class="form-check-input" name="hobi[]" type="checkbox" value="coding" id="coding">
                         <label class="form-check-label" for="coding">
                             Coding
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="hobi" type="checkbox" value="membaca" id="membaca">
+                        <input class="form-check-input" name="hobi[]" type="checkbox" value="membaca" id="membaca">
                         <label class="form-check-label" for="membaca">
                             Membaca
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="hobi" type="checkbox" value="olahraga" id="olahraga">
+                        <input class="form-check-input" name="hobi[]" type="checkbox" value="olahraga" id="olahraga">
                         <label class="form-check-label" for="olahraga">
                             Olahraga
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="hobi" type="checkbox" value="musik" id="musik">
+                        <input class="form-check-input" name="hobi[]" type="checkbox" value="musik" id="musik">
                         <label class="form-check-label" for="musik">
                             Musik
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="hobi" type="checkbox" value="fotografi" id="fotografi">
+                        <input class="form-check-input" name="hobi[]" type="checkbox" value="fotografi" id="fotografi">
                         <label class="form-check-label" for="fotografi">
                             Fotografi
                         </label>

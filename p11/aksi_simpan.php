@@ -8,9 +8,11 @@ $no_hp = $_POST['no_hp'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
 $jurusan = $_POST['jurusan'];
 $alamat = $_POST['alamat'];
+$hobi = $_POST['hobi'];
+$hobies = implode(",", $hobi);
 
 // Query tambah data mahasiswa
-$sql = "INSERT INTO mahasiswa (nim, nama, no_hp, jenis_kelamin, jurusan, alamat) VALUES ('$nim', '$nama', '$no_hp', '$jenis_kelamin', '$jurusan', '$alamat')";
+$sql = "INSERT INTO mahasiswa (nim, nama, no_hp, jenis_kelamin, jurusan, alamat, hobi) VALUES ('$nim', '$nama', '$no_hp', '$jenis_kelamin', '$jurusan', '$alamat', '$hobies')";
 if (mysqli_query($link, $sql)) {
     header("location:tampil_data.php");
 } else {
