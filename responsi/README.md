@@ -2,13 +2,14 @@
 
 ---
 
-## 📚 Daftar Isi
+## Daftar Isi
 
-* [👋 Intro Dulu, Yuk!](#intro-dulu-yuk)
-* [💻 Cara Menjalankan Programnya](#cara-menjalankan-programnya)
-    * [Penting! Siapkan Database MySQL!](#-penting-siapkan-database-mysql)
+* [Daftar Isi](#daftar-isi)
+* [Intro Dulu, Yuk!](#intro-dulu-yuk)
+* [Cara Menjalankan Programnya](#cara-menjalankan-programnya)
+    * [Penting! Siapkan Database MySQL!](#penting-siapkan-database-mysql)
     * [Menjalankan PHP Server (Pilih Salah Satu!)](#menjalankan-php-server-pilih-salah-satu)
-* [📝 Soal Tes dan Tips dari Kami!](#-soal-tes-dan-tips-dari-kami)
+* [Soal Tes dan Tips dari Kami!](#soal-tes-dan-tips-dari-kami)
     * [1. Aset tidak mau terbaca!](#1-aset-tidak-mau-terbaca)
     * [2. Belum bisa login](#2-belum-bisa-login)
     * [3. Password belum terenkripsi](#3-password-belum-terenkripsi)
@@ -19,12 +20,12 @@
     * [8. Fungsi hapus belum berjalan dengan baik](#8-fungsi-hapus-belum-berjalan-dengan-baik)
     * [9. Total mahasiswa pada study program tidak benar](#9-total-mahasiswa-pada-study-program-tidak-benar)
     * [10. Pastikan Semuanya Berjalan dengan Baik!](#10-pastikan-semuanya-berjalan-dengan-baik)
-* [⏳ Estimasi Waktu Pengerjaan dan Bobot Nilai](#estimasi-waktu-pengerjaan-dan-bobot-nilai)
-* [🎉 Penutup](#penutup)
+* [Estimasi Waktu Pengerjaan dan Bobot Nilai](#estimasi-waktu-pengerjaan-dan-bobot-nilai)
+* [Penutup](#penutup)
 
 ---
 
-## 👋 Intro Dulu, Yuk!
+## Intro Dulu, Yuk!
 
 Halo calon **developer** kece! Selamat datang di tes yang seru ini. Anggap aja kamu sekarang adalah seorang karyawan baru di sebuah *startup* yang fokus banget sama dunia pendidikan. Nah, tugas pertama kamu adalah bantu benerin **bug** di web internal kampus yang dipakai buat pendataan mahasiswa.
 
@@ -36,11 +37,11 @@ Jangan lupa ya, ilmu **OOP (Object-Oriented Programming)** yang udah kamu pelaja
 
 ---
 
-## 💻 Cara Menjalankan Programnya
+## Cara Menjalankan Programnya
 
 Oke, setelah kamu siap dengan kodenya, gimana nih cara biar web-nya bisa jalan di komputermu?
 
-### ⚠️ Penting! Siapkan Database MySQL!
+### Penting! Siapkan Database MySQL!
 
 Sebelum kamu mulai, kamu perlu **mengaktifkan Apache dan MySQL** di XAMPP-mu. Setelah itu, buka **PHPMyAdmin**, lalu **buat database baru**. Untuk databasenya, kamu tinggal **import file `dump.sql`** yang sudah tersedia di folder proyek ini. File ini berisi struktur tabel dan data awal yang dibutuhkan web-nya.
 
@@ -75,7 +76,7 @@ Jadi, kamu tinggal sesuaikan aja *path* `D:\xampp\php\php.exe` dengan lokasi ins
 
 ---
 
-## 📝 Soal Tes dan Tips dari Kami!
+## Soal Tes dan Tips dari Kami!
 
 Oke, ini dia bagian yang paling kamu tunggu-tunggu: **soal tesnya!** Jangan tegang, ini kesempatan kamu buat nunjukkin *pemahaman coding*-mu.
 
@@ -97,7 +98,7 @@ Ini masalah keamanan serius! **Password** yang ada di database saat ini masih da
 
 ### 4. Menambahkan user baru
 
-Setelah sukses **login** dan **password** terenkripsi dengan aman, kamu juga diminta untuk menambahkan **user** baru**. Cukup berikan **query** SQL untuk menambahkan **user** ini dan simpan di **notepad**. Pastikan kamu juga menyertakan detail **email** dan **password** untuk akun baru tersebut. Yang terpenting, pastikan **akun baru** itu bisa digunakan untuk **login** ke sistem!
+Setelah sukses **login** dan **password** terenkripsi dengan aman, kamu juga diminta untuk menambahkan **user** baru. Cukup berikan **query** SQL untuk menambahkan **user** ini dan simpan di **notepad**. Pastikan kamu juga menyertakan detail **email** dan **password** untuk akun baru tersebut. Yang terpenting, pastikan **akun baru** itu bisa digunakan untuk **login** ke sistem!
 
 ### 5. Tambahkan nim dan nama di footer
 
@@ -128,14 +129,14 @@ Setelah semua **bug** di atas beres dan fitur baru ditambahkan, pastikan kamu me
 
 ---
 
-## ⏳ Estimasi Waktu Pengerjaan dan Bobot Nilai
+## Estimasi Waktu Pengerjaan dan Bobot Nilai
 
 Ini perkiraan waktu yang bisa kamu alokasikan untuk setiap tugas, dengan total waktu pengerjaan tidak lebih dari **60 menit**. Bobot nilai juga kami sertakan untuk setiap bagian, jadi kamu bisa tahu prioritasnya!
 
 | No. | Tugas | Estimasi Waktu | Bobot Nilai |
 | :-- | :----------------------------------------------- | :------------- | :---------- |
-| | Instalasi (Bisa jalan) | 15 menit | 15% |
-| | Baca kode program | 0 menit | |
+| | Instalasi (sampai berjalan) | 10 menit | 15% |
+| | Baca kode program | 10 menit | |
 | 1. | Aset tidak mau terbaca | 2 menit | 5% |
 | 2. | Belum bisa *login* | 3 menit | 10% |
 | 3. | *Password* belum terenkripsi | 8 menit | 15% |
@@ -144,12 +145,12 @@ Ini perkiraan waktu yang bisa kamu alokasikan untuk setiap tugas, dengan total w
 | 6. | Tambahkan data hobi sesuai NIM | 4 menit | 5% |
 | 7. | Fungsi *edit* belum terisi dengan benar | 5 menit | 10% |
 | 8. | Fungsi *hapus* belum berjalan dengan baik | 5 menit | 10% |
-| 9. | Total mahasiswa pada *study program* tidak benar | 15 menit | 15% |
-| 10. | Pengujian menyeluruh | 0 menit | |
+| 9. | Total mahasiswa pada *study program* tidak benar | 10 menit | 15% |
+| 10. | Pengujian menyeluruh | (setiap soal) | |
 | | **Total Estimasi Waktu** | **60 menit** | **100%** |
 
 ---
 
-## 🎉 Penutup
+## Penutup
 
 Selamat mengerjakan tes ini! Ingat, ini bukan cuma tentang menemukan dan memperbaiki **bug**, tapi juga tentang bagaimana kamu menerapkan pengetahuanmu di skenario dunia nyata. Semoga sukses, dan kami tunggu hasil terbaikmu! Kalau ada kendala, jangan ragu untuk kembali melihat instruksi ini. Semangat! 💪
