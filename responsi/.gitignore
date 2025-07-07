@@ -182,7 +182,6 @@ dist
 !system/cache/*
 !*/cache/index.html
 !*/cache/.htaccess
-/vendor/
 
 ### CodeIgniter Patch ###
 
