@@ -44,15 +44,14 @@ class AuthController extends Controller
 				return;
 			}
 
-			session_start();
 			$_SESSION['user'] = [
-				'id' => $user->id,
-				'name' => $user->name,
-				'email' => $user->email,
+				'id' => $user['id'],
+				'name' => $user['name'],
+				'email' => $user['email'],
 			];
 
 			$this->successMessage('Success to logged in.');
-			echo "<script>setTimeout(() => { window.location.href = '/' }, 500)</script>";
+			echo "<script>setTimeout(() => { window.location.href = '" . BASE_PATH . "/' }, 500)</script>";
 		} catch(\Exception $e) {
 			$this->errorMessage('Failed to logged in.', true);
 		}
@@ -62,6 +61,6 @@ class AuthController extends Controller
 	{
 		$this->mustBeLoggedIn();
 		session_destroy();
-		header('Location: /login');
+		header('Location: ' . BASE_PATH . '/login');
 	}
 }

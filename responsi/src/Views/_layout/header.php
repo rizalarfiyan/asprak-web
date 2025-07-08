@@ -3,7 +3,7 @@
 	$current = $_SERVER['REQUEST_URI'];
 	$menus = [
 		[
-			'path' => '/login',
+			'path' => BASE_PATH . '/login',
 			'name' => 'Login',
 		]
 	];
@@ -11,19 +11,19 @@
 	if (isset($_SESSION['user'])) {
 		$menus = [
 			[
-				'path' => '/',
+				'path' => BASE_PATH . '/',
 				'name' => 'Home',
 			],
 			[
-				'path' => '/student',
+				'path' => BASE_PATH . '/student',
 				'name' => 'Student',
 			],
 			[
-				'path' => '/study-program',
+				'path' => BASE_PATH . '/study-program',
 				'name' => 'Study Program',
 			],
 			[
-				'path' => '/logout',
+				'path' => BASE_PATH . '/logout',
 				'name' => 'Logout',
 			]
 		];

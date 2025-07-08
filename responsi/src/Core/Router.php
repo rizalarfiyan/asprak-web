@@ -50,31 +50,40 @@ class Router
 	}
 
 	public function dispatch()
-	{
-		$uri = strtok($_SERVER['REQUEST_URI'], '?');
-		$method = $_SERVER['REQUEST_METHOD'];
-		$isHTMXRequest = isset($_SERVER['HTTP_HX_REQUEST']) && $_SERVER['HTTP_HX_REQUEST'] == 'true';
+    {
+        $uri = strtok($_SERVER['REQUEST_URI'], '?');
+        $method = $_SERVER['REQUEST_METHOD'];
+        $isHTMXRequest = isset($_SERVER['HTTP_HX_REQUEST']) && $_SERVER['HTTP_HX_REQUEST'] == 'true';
 
-		foreach ($this->routes[$method] as $route => $params) {
-			$pattern = preg_replace_callback('/\{([^\}]+)\}/', function ($matches) use ($params) {
-				$key = $matches[1];
-				return isset($params['validation'][$key]) ? '(' . $params['validation'][$key] . ')' : '([^/]+)';
-			}, $route);
+        if (BASE_PATH && strpos($uri, BASE_PATH) === 0) {
+            $uri = substr($uri, strlen(BASE_PATH));
+        }
 
-			$pattern = str_replace('/', '\/', $pattern);
-			if (preg_match('/^' . $pattern . '$/', $uri, $matches)) {
-				if ($params['htmx'] && !$isHTMXRequest) break;
+        if (empty($uri)) {
+            $uri = '/';
+        }
 
-				array_shift($matches);
-				$controller = $params['controller'];
-				$action = $params['action'];
+        foreach ($this->routes[$method] as $route => $params) {
+            $pattern = preg_replace_callback('/\{([^\}]+)\}/', function ($matches) use ($params) {
+                $key = $matches[1];
+                return isset($params['validation'][$key]) ? '(' . $params['validation'][$key] . ')' : '([^/]+)';
+            }, $route);
 
-				$controller = new $controller();
-				call_user_func_array([$controller, $action], [...$matches, $params['req']]);
-				return;
-			}
-		}
+            $pattern = str_replace('/', '\/', $pattern);
+            if (preg_match('/^' . $pattern . '$/', $uri, $matches)) {
+                if ($params['htmx'] && !$isHTMXRequest) break;
 
-		include __DIR__ . "/../Views/404.php";
-	}
+                array_shift($matches);
+                $controller = $params['controller'];
+                $action = $params['action'];
+
+                $controller = new $controller();
+                call_user_func_array([$controller, $action], [...$matches, $params['req']]);
+                return;
+            }
+        }
+
+        http_response_code(404);
+        include __DIR__ . "/../Views/404.php";
+    }
 }

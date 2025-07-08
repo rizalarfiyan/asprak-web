@@ -11,7 +11,7 @@
 		<h2 class="text-xl font-semibold pb-4 border-b border-secondary-200 mb-4">
 			Create Student
 		</h2>
-        <form class="mx-auto space-y-4" hx-post="/student" hx-on::after-request="htmx.trigger(htmx.find('body'), 'doReloadStudentTable')">
+        <form class="mx-auto space-y-4" hx-post="<?= BASE_PATH ?>/student" hx-on::after-request="htmx.trigger(htmx.find('body'), 'doReloadStudentTable')">
             <div class="flex items-center justify-between gap-4">
                 <div class="w-full space-y-2">
                     <label for="nim">NIM</label>

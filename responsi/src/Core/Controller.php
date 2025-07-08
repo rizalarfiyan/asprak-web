@@ -47,14 +47,14 @@ class Controller
 	protected function mustBeLoggedIn()
 	{
 		if (!$this->isLoggedIn()) {
-			header('Location: /login');
+			header('Location: ' . BASE_PATH . '/login');
 		}
 	}
 
 	protected function redirectIfHasLoggedIn()
 	{
 		if ($this->isLoggedIn()) {
-			header('Location: /');
+			header('Location: ' . BASE_PATH . '/');
 		}
 	}
 

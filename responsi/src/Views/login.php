@@ -6,7 +6,7 @@
 			<p class="text-secondary-500 mt-2">Enter your login information to proceed.</p>
 		</div>
 
-		<form class="mx-auto space-y-4" hx-post="/login" hx-target="#message" hx-swap="innerHTML">
+		<form class="mx-auto space-y-4" hx-post="<?= BASE_PATH ?>/login" hx-target="#message" hx-swap="innerHTML">
 			<div id="message" class="mb-4"></div>
 			<div class="space-y-6">
 				<div class="space-y-2">
